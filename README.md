@@ -6,6 +6,14 @@
 
 - **Puerto**: 3003
 
+## Diagrama de Flujo de Scrappers
+
+### Obtener informacion de los partidos del dia
+![Obtener Partidos del Dia](diagrams/games-of-the-day.png)
+
+### Obtener informacion de los incidentes de un partido
+![Incidentes del Partido](diagrams/incidents-flow.png)
+
 ## Operaciones Disponibles
 
 ### Inicializar Datos
