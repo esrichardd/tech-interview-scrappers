@@ -6,7 +6,7 @@ FROM base AS development
 WORKDIR /usr/src/tech-interview-scrappers
 COPY . .
 RUN go install github.com/air-verse/air@latest
-EXPOSE 3001
+EXPOSE 3003
 ENTRYPOINT ["air"]
 
 FROM base AS builder
@@ -17,5 +17,5 @@ RUN go build -a --installsuffix cgo --ldflags="-s" -o main
 FROM alpine:latest AS production
 RUN apk --no-cache add ca-certificates
 COPY --from=builder /usr/src/tech-interview-scrappers .
-EXPOSE 3001
+EXPOSE 3003
 ENTRYPOINT ["./main"]
